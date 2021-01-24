@@ -65,12 +65,7 @@ export type PollOptItem = {
   dead?: boolean;
 };
 
-export type Item
-  = JobItem
-  | StoryItem
-  | CommentItem
-  | PollItem
-  | PollOptItem
+export type Item = JobItem | StoryItem | CommentItem | PollItem | PollOptItem;
 
 export type User = {
   id: number;

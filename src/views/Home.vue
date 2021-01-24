@@ -11,7 +11,7 @@ import ItemComponent from "@/components/Item.component.vue"; // @ is an alias to
 export default defineComponent({
   name: "Home",
   components: {
-    ItemComponent,
+    ItemComponent
   }
 });
 </script>

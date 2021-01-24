@@ -1,11 +1,10 @@
-import firebase from "firebase";
-import initializeApp = firebase.initializeApp;
+import firebase from "firebase/app";
+import "firebase/database";
 import { Item, StoryType, User } from "@/api/api-types";
 
-initializeApp({
+firebase.initializeApp({
   databaseURL: "https://hacker-news.firebaseio.com"
 });
-
 
 const api = firebase.database().ref("/v0");
 
@@ -16,7 +15,7 @@ function fetch(child: string): Promise<unknown> {
     .then(snapshot => {
       const val = snapshot.val();
       if (val) {
-        val.__lastUpdated = Date.now()
+        val.__lastUpdated = Date.now();
       }
       return val;
     });

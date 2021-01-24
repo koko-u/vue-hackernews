@@ -19,7 +19,7 @@ module.exports = {
     "prefer-promise-reject-errors": [
       "error",
       {
-        "allowEmptyReject": false
+        allowEmptyReject: false
       }
     ],
     "no-new": "error"
